@@ -4,7 +4,7 @@
 
 ![xcode 영역](Study/img/xcode_영역.png) 
 
-이미지 출처 : https://m.blog.naver.com/PostView.nhn?blogId=sqlpro&logNo=221045495843&proxyReferer=https:%2F%2Fwww.google.com%2F
+이미지 출처 : [이미지 링크](https://m.blog.naver.com/PostView.nhn?blogId=sqlpro&logNo=221045495843&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
 - Navigator Area 안에서는 프로젝트의 구조를 살펴 볼 수가 있다.
 - Editor Area는 실제 코드를 작성하기도 하며 스토리보드를 이용해 UI를 구성할 수 있는 공간이다.
