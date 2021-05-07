@@ -2,7 +2,7 @@
 
 ---
 
-![xcode 영역](https://mblogthumb-phinf.pstatic.net/MjAxNzA3MDZfMTc5/MDAxNDk5MzI3NzQyMTY4.QuMilUP_AOwiy08FWjWZSgcuxSzGd9_oWimIJZTZuXUg.HH5BCZJeILpIwenPkGbBfd3buI8ggr-xIoLruX3WeSIg.PNG.sqlpro/Pasted_Graphic.png?type=w2) 
+![xcode 영역](Study/img/xcode_영역.png) 
 
 이미지 출처 : https://m.blog.naver.com/PostView.nhn?blogId=sqlpro&logNo=221045495843&proxyReferer=https:%2F%2Fwww.google.com%2F
 
