@@ -12,3 +12,9 @@
 - Toolbar Area는 코드를 실행, 멈춤 또 화면 분할 등을 도와주는 기능들이 있다.
 
 모든 기능들을 전부 알고 사용할 필요는 없다. 사용하면서 모르는 부분을 찾아가면 된다!
+
+![attribute Image](img/attribute.png)
+
+이미지 출처 : 내꺼
+
+Utility Area에는 위 이미지처럼 View들의 속성을 변경할 수 있다.
