@@ -13,7 +13,7 @@
 
 모든 기능들을 전부 알고 사용할 필요는 없다. 사용하면서 모르는 부분을 찾아가면 된다!
 
-![attribute Image](/img/attribute.png)
+![attribute Image](/img/attribute.PNG)
 
 이미지 출처 : 내꺼
 
