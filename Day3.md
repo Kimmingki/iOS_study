@@ -36,13 +36,20 @@
 
       <img src="./img/connection.png" width="350">
   
+      드래그 한 뒤에  
+  
+      ``` swift
+      @IBAction func name(_ sender: Any) {
+        // code...
+      }
+      ```
+  
+      라는 코드가 적용되면 code란에 원하는 동작을 작성하면 된다.
+  
       - outlet은 텍스트 색상 또는 텍스트 크기 등 일부 제어 속성을 변경하는 경우에 사용
       - action은 트리거를 탐지하는 경우 (즉, 버튼을 누를 때) 사용
   
     - 
-  
-  - 기종 사이즈는 원하는대로
-  
   
 
 
