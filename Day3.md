@@ -16,7 +16,7 @@
 
 - 버튼과 액션
 
-  <img src = "/img/viewController.png">
+  <img src = "/img/viewController.png" width="450">
 
   View Controller는 페이지 하나를 담당한다.
 
