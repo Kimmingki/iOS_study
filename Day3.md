@@ -128,6 +128,8 @@
 
   뷰의 기준은 스크린의 좌측 상단으로 오른쪽으로 갈수록 X값이 +, 왼쪽으로 -, 밑으로 갈수록 Y값이 +, 위로 갈수록 -
 
+
+
 <br>
 
 ---
@@ -169,6 +171,28 @@ String - 문자 하나하나의 나열
 swift에는 문자열에 좋은 기능이 있다. String Interpolation (문자열 삽입)이라는 기능으로 문자열에 변수를 아주 쉽게 넣을 수 있다.
 
 ``` swift
-var currentValue = 0
-let message = "가격은 ₩\(currentValue)입니다."
+import UIKit
+
+class ViewController: UIViewController {
+    
+    var currentValue = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func showAlert(_ sender: Any) {
+        let message = "가격은 \(currentValue) 입니다." // 이처럼 문자열에 변수를 삽입 할 수 있다.
+        let alert = UIAlertController(title: "refresh!", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.refresh()
+        })
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+}
 ```
+
+Variable - 어떠한 값을 저장할 수 있는 공간
+
+변수에 따라 담아두는 공간의 **Type**이 달라야 한다.
