@@ -58,14 +58,14 @@
       ``` swift
       @IBAction func showAlert(_ sender: Any) {
               let alert = UIAlertController(title: "Hello", message: "My First App!!", preferredStyle: .alert)
-       				// alert 창에 어떤 메세지를 담을지 alert란 변수에 정보를 저장
+        	// alert 창에 어떤 메세지를 담을지 alert란 변수에 정보를 저장
               let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        			// OK라는 버튼을 누를 시 어떤 동작을 할지에 관한 내용을 action이라는 변수에 저장
-       				// OK를 눌렀을 시 별 다른 행동을 취할 것이 없기 때문에 handler에는 nil을 입력
+      	// OK라는 버튼을 누를 시 어떤 동작을 할지에 관한 내용을 action이라는 변수에 저장
+      	// OK를 눌렀을 시 별 다른 행동을 취할 것이 없기 때문에 handler에는 nil을 입력
               alert.addAction(action)
-        			// OK 버튼을 누를 수 있도록 Action 추가
+      	// OK 버튼을 누를 수 있도록 Action 추가
               present(alert, animated: true, completion: nil)
-        			// 위에서 만든 alert창을 띄우기
+      	// 위에서 만든 alert창을 띄우기
           }
       ```
   
