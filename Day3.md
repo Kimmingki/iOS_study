@@ -4,7 +4,7 @@
 
 - 목표 및 할일 정리
 
-  ![first_app](/img/first_app.png)
+  ![first_app](/img/first_app.png){: width="100" height="250"}
 
   - View
     - 타이틀 텍스트
