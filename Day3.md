@@ -58,14 +58,14 @@
       ``` swift
       @IBAction func showAlert(_ sender: Any) {
               let alert = UIAlertController(title: "Hello", message: "My First App!!", preferredStyle: .alert)
-        // alert 창에 어떤 메세지를 담을지 alert란 변수에 정보를 저장
+       				// alert 창에 어떤 메세지를 담을지 alert란 변수에 정보를 저장
               let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        // OK라는 버튼을 누를 시 어떤 동작을 할지에 관한 내용을 action이라는 변수에 저장
-        // OK를 눌렀을 시 별 다른 행동을 취할 것이 없기 때문에 handler에는 nil을 입력
+        			// OK라는 버튼을 누를 시 어떤 동작을 할지에 관한 내용을 action이라는 변수에 저장
+       				// OK를 눌렀을 시 별 다른 행동을 취할 것이 없기 때문에 handler에는 nil을 입력
               alert.addAction(action)
-        // OK 버튼을 누를 수 있도록 Action 추가
+        			// OK 버튼을 누를 수 있도록 Action 추가
               present(alert, animated: true, completion: nil)
-        // 위에서 만든 alert창을 띄우기
+        			// 위에서 만든 alert창을 띄우기
           }
       ```
   
@@ -127,3 +127,48 @@
 - 뷰의 위치
 
   뷰의 기준은 스크린의 좌측 상단으로 오른쪽으로 갈수록 X값이 +, 왼쪽으로 -, 밑으로 갈수록 Y값이 +, 위로 갈수록 -
+
+<br>
+
+---
+
+<br>
+
+### 오브젝트 이해하기
+
+---
+
+앱은 오브젝트로 구성된다고 했는데 오브젝트란 무엇인가!
+
+오브젝트는 특정 역할을 수행하는 녀석이라고 생각할 수 있다. (각자 해야 할 일이 있음)
+
+오브젝트는 두가지로 분류 할 수 있다.
+
+* Data
+
+  alert을 예로 들자면 title, message 같은 것들이 데이터에 속한다고 볼 수 있다.
+
+  <img src="./img/objectAlert.png" width="200">
+
+* Method
+
+  alert에서 OK 혹은 확인 버튼 같은 것을 눌렀을 때 수행되는 것을 의미한다.
+
+<br>
+
+---
+
+<br>
+
+### 문자열과 변수
+
+---
+
+String - 문자 하나하나의 나열
+
+swift에는 문자열에 좋은 기능이 있다. String Interpolation (문자열 삽입)이라는 기능으로 문자열에 변수를 아주 쉽게 넣을 수 있다.
+
+``` swift
+var currentValue = 0
+let message = "가격은 ₩\(currentValue)입니다."
+```
