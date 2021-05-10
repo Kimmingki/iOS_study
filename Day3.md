@@ -26,9 +26,16 @@
 
       <img src="/img/viewControllerPart.png" width="350">
 
+    - Design과 code는 연결되어 있기 때문에 새로운 ViewController를 만들었다면
+
+      <img src="/img/viewControllerIdentity.png" width="350">
+
+      Identity 설정에서 새로 만든 ViewController의 이름을 넣으면 그쪽으로 스토리보드가 연동이 된다.
+
   - 기종 사이즈는 원하는대로
 
   
+
 
 - 문제 해결
 - 앱 동작 방식 이해
