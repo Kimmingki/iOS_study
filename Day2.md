@@ -15,6 +15,4 @@
 
 ![attribute Image](/img/attribute.PNG)
 
-이미지 출처 : 내꺼
-
 Utility Area에는 위 이미지처럼 View들의 속성을 변경할 수 있다.
