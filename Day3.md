@@ -1,4 +1,4 @@
-### 첫 앱 만들기
+
 
 ---
 
@@ -19,9 +19,12 @@
   <img src = "/img/viewController.png" width="450">
 
   - View Controller는 페이지(스크린) 하나를 담당한다.
+
     - 이번 앱에서는 페이지가 하나만 필요하기 때문에 View Controller 하나만 사용
-    - <img src = "/img/viewControllerPart.png" width="350">
+
     - View Controller는 스토리보드에서 확인하는 Design part 그리고 거기에 연결된 Code part가 있다.
+
+      <img src="/img/viewControllerPart.png" width="350">
 
   - 기종 사이즈는 원하는대로
 
