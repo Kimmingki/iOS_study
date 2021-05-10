@@ -31,9 +31,16 @@
       <img src="/img/viewControllerIdentity.png" width="350">
 
       Identity 설정에서 새로 만든 ViewController의 이름을 넣으면 그쪽으로 스토리보드가 연동이 된다.
+      
+    - 버튼을 추가하고 버튼이 동작하도록 만들고 싶을 때는 Control을 누른 상태에서 Code로 드래그 하면 action이나 outlet을 설정 할 수 있다.
 
+      <img src="/img/connection.png" width="350">
+  
+      - outlet은 텍스트 색상 또는 텍스트 크기 등 일부 제어 속성을 변경하는 경우에 사용
+      - action은 트리거를 탐지하는 경우 (즉, 버튼을 누를 때) 사용
+  
   - 기종 사이즈는 원하는대로
-
+  
   
 
 
