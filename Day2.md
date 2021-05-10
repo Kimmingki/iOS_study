@@ -2,7 +2,7 @@
 
 ---
 
-![xcode 영역](/img/xcode_area.png)
+<img src="./img/xcode_area.png">
 
 이미지 출처 : [이미지 링크](https://m.blog.naver.com/PostView.nhn?blogId=sqlpro&logNo=221045495843&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
@@ -13,6 +13,6 @@
 
 모든 기능들을 전부 알고 사용할 필요는 없다. 사용하면서 모르는 부분을 찾아가면 된다!
 
-![attribute Image](/img/attribute.PNG)
+<img src="./img/attribute.png">
 
 Utility Area에는 위 이미지처럼 View들의 속성을 변경할 수 있다.

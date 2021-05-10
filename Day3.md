@@ -1,10 +1,10 @@
-
+### 첫 앱 만들기
 
 ---
 
 - 목표 및 할일 정리
 
-  <img src = "/img/first_app.png" width="200">
+  <img src = "./img/first_app.png" width="200">
 
   - View
     1. 타이틀 텍스트
