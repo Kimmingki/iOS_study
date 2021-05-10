@@ -1,4 +1,4 @@
-### 첫 앱 만들기
+### 첫 앱 만들기 위한 기초지식
 
 ---
 
@@ -58,20 +58,51 @@
       ``` swift
       @IBAction func showAlert(_ sender: Any) {
               let alert = UIAlertController(title: "Hello", message: "My First App!!", preferredStyle: .alert)
-        			// alert 창에 어떤 메세지를 담을지 alert란 변수에 정보를 저장
+        // alert 창에 어떤 메세지를 담을지 alert란 변수에 정보를 저장
               let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        			// OK라는 버튼을 누를 시 어떤 동작을 할지에 관한 내용을 action이라는 변수에 저장
-        			// OK를 눌렀을 시 별 다른 행동을 취할 것이 없기 때문에 handler에는 nil을 입력
+        // OK라는 버튼을 누를 시 어떤 동작을 할지에 관한 내용을 action이라는 변수에 저장
+        // OK를 눌렀을 시 별 다른 행동을 취할 것이 없기 때문에 handler에는 nil을 입력
               alert.addAction(action)
-        			// OK 버튼을 누를 수 있도록 Action 추가
+        // OK 버튼을 누를 수 있도록 Action 추가
               present(alert, animated: true, completion: nil)
-        			// 위에서 만든 alert창을 띄우기
+        // 위에서 만든 alert창을 띄우기
           }
       ```
   
 
 
 - 문제 해결
+
+  1. **오타**
+
+     컴퓨터는 오타를 용납해주지 않는다. (자동완성 기능을 잘 활용하자)
+
+     대소문자를 구분을 하기 때문에 대소문자 구분도 정확히!
+
+  2. **코드가 바운더리 {} 밖으로 나가는 것을 조심하자**
+
+  3. **연결 되어 있는 함수, 클래스명에 유의하자**
+
+     버튼, 텍스트 등이 연결된 메소드의 이름이 다를 시 앱이 제대로 작동하지 않는다. (빌드에 성공은 하지만 트리거 작동 시 앱이 크래쉬 날 수도 있음)
+
+  4. **warning (노란창)을 무시하지말자**
+
+     빌드에도 문제가 없고 작동하는데 문제가 전혀 없지만 잠재적 버그의 이유가 될 수 있으니 이왕이면 잡는 것이 좋다.
+
+  5. **오류 메세지를 잘 읽자!**
+
+     문제가 발생 했을 시 오류 메세지를 읽으면 대부분 해결책이 적혀 있다.
+
+
 - 앱 동작 방식 이해
-- ...
+
+<br>
+
+---
+
+<br>
+
+### 첫 앱 만들기 (뷰 구성하기)
+
+---
 
