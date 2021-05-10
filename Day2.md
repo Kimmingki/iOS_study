@@ -2,7 +2,7 @@
 
 ---
 
-![xcode 영역](/img/xcode_area.png) 
+![xcode 영역](/img/xcode_area.png)
 
 이미지 출처 : [이미지 링크](https://m.blog.naver.com/PostView.nhn?blogId=sqlpro&logNo=221045495843&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
