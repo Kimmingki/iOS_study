@@ -4,7 +4,7 @@
 
 - 목표 및 할일 정리
 
-  ![first_app](/img/first_app.png){: width="100" height="250"}
+  <img src = "/img/first_app.png" width="200">
 
   - View
     - 타이틀 텍스트
@@ -16,7 +16,7 @@
 
 - 버튼과 액션
 
-  ![viewController](/img/viewController.png)
+  <img src = "/img/viewController.png">
 
   View Controller는 페이지 하나를 담당한다.
 
