@@ -68,7 +68,6 @@
       	// 위에서 만든 alert창을 띄우기
           }
       ```
-  
 
 
 - 문제 해결
@@ -196,3 +195,4 @@ class ViewController: UIViewController {
 Variable - 어떠한 값을 저장할 수 있는 공간
 
 변수에 따라 담아두는 공간의 **Type**이 달라야 한다.
+

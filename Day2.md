@@ -13,6 +13,6 @@
 
 모든 기능들을 전부 알고 사용할 필요는 없다. 사용하면서 모르는 부분을 찾아가면 된다!
 
-<img src="./img/attribute.png">
+<img src="./img/attribute.PNG">
 
 Utility Area에는 위 이미지처럼 View들의 속성을 변경할 수 있다.
