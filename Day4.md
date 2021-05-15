@@ -130,3 +130,29 @@ func functionName(param) {
 
 타입추론이란 스위프트에서 제공하는 강력한 기능으로 `priceLabel: UILabel`처럼 타입을 써 놓을 수 있지만
 
+반면 `var currentValue = 0` 같은 경우에는 타입을 적어놓지 않았다. 하지만 option키를 누르고 변수를 클릭해보면
+
+<img src="./img/type.png">
+
+처럼 Int type을 가지고 있는 것을 알 수 있다. 이처럼 타입을 굳이 쓰지 않아도 swift가 알아서 타입을 추론한다.
+
+<br>
+
+### Local vs. Instance 변수
+
+---
+
+Local변수 - 메소드 안에서만 사용 할 수 있는 변수
+
+<img src="./img/localVariable.png" width="500">
+
+Instance변수 - 오브젝트 안에서 전반적으로 쓰이는 변수
+
+<img src="./img/instanceVariable.png" width="500">
+
+<br>
+
+### 클로져 기초
+
+---
+
