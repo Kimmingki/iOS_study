@@ -156,3 +156,19 @@ Instance변수 - 오브젝트 안에서 전반적으로 쓰이는 변수
 
 ---
 
+Closure = {	}
+
+클로저라는 녀석은 쉽게 말해 **실행 가능한 코드 블럭**이다.
+
+클로저는 변수처럼 파라미터로 함수에 넘겨줄 수도 있다.
+
+``` swift
+let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+// 위 코드에서 handler에 무언가를 넣으면 OK를 눌렀을 때 handler를 실행하라는 의미이다.
+// 따라서 handler에 코드 블럭을 넣어준다.
+
+let action = UIAlertAction(title: "OK", style: .default, handler: { action in
+  self.refresh()
+})
+```
+
