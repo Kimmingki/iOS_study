@@ -11,8 +11,9 @@ function은 전에 정리한 method와 **기능을 수행한다**는 점에서 �
 > functionName() --> function
 
 ``` swift
-func 함수이름(인자) {
+func functionName(externalName param: ParamType) -> ReturnType {
   // code...
+  // return returnValue
 } // 이런식으로 만들 수 있다.
 ```
 
@@ -109,3 +110,100 @@ calculatedPrice
 // 이렇게 함수의 반환값을 변수에 넣을 수 있다.
 ```
 
+<br>
+
+<br>
+
+### Function 고급기능
+
+---
+
+#### Overload
+
+overload는 같은 함수의 이름을 갖지만 **파라미터나 리턴값이 달라지는 경우** 의 개념이다. (같은 이름 다른 행동)
+
+``` swift
+func printTotalPrice(price: Int, count: Int) {
+    print("Total Price: \(price * count)")
+}
+
+func printTotalPrice(price: Double, count: Double) {
+    print("Total Price: \(price * count)")
+}
+
+func printTotalPrice(가격: Double, 갯수: Double) {
+    print("Total Price: \(가격 * 갯수)")
+}
+```
+
+위 처럼 같은 이름의 함수에서 파라미터나 리턴값을 다르게 설정하는 것을 의미한다.
+
+<br>
+
+#### In-out parameter
+
+함수에서 파라미터는 복사하여 값을 받아오는데 이 때 파라미터는 기본적으로 **Constant value** 로 들어오게 된다.
+
+``` swift
+func incrementAndPrint(_ value: Int) {
+  value += 1
+  print(value)
+}
+// 예를들어 값을 받아 1을 더한 뒤 출력하고 싶은 함수가 있다고 했을 때,
+// 파라미터에 들어가는 value는 기본적으로 constant value로 들어가기 때문에 변경이 불가능하다.
+```
+
+그렇기 때문에 **In-out 키워드**를 사용하여 문제를 해결할 수 있다.
+
+``` swift
+func incrementAndPrint(_ value: inout Int) {
+  value += 1
+  print(value)
+}
+
+incrementAndPrint(&3)
+// In-out 키워드를 사용하였을 때는 함수에 파라미터를 넘기기 전 ' & '를 붙혀서 사용하도록 한다.
+```
+
+<br>
+
+#### Function as a param
+
+ **변수에 함수를 할당** 할 수도 있다.
+
+``` swift
+func add(_ a: Int, _ b: Int) -> Int {
+  return a + b
+}
+
+func subtract(_ a: Int, _ b: Int) -> Int {
+  return a - b
+}
+
+var function = add
+function = subtract
+// 이런 식으로 변수에 함수를 할당하는 것이 가능하다.
+```
+
+현대 프로그래밍 언어에서는 **함수의 인자로 함수**를 넣을 수 있다.
+
+``` swift
+func add(_ a: Int, _ b: Int) -> Int {
+  return a + b
+}
+
+func printResult(_ function: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+  let result = function(a, b)
+  print(result)
+}
+
+printResult(add, 10, 5)
+```
+
+이런 식으로 가능하다.
+
+<br>
+
+<br>
+
+##### 함수는 최대한 짧게 작성하며, 되도록 함수 하나당 한가지 일을 수행하도록 만드는 것이 좋다.
