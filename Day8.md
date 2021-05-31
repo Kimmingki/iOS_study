@@ -207,3 +207,79 @@ printResult(add, 10, 5)
 <br>
 
 ##### 함수는 최대한 짧게 작성하며, 되도록 함수 하나당 한가지 일을 수행하도록 만드는 것이 좋다.
+
+<br>
+
+<br>
+
+### Optional
+
+---
+
+optional이란 **없는 것을 표현하고자 할 때 사용**하는 것! optional **타입을 선언하는 방법**은 매우 간단하다.
+
+보통 변수를 선언할 경우 `var carName: String = "Tesla"` 으로 표현하지만 뒤에 ' ? '를 붙혀서 optional이 된다.
+
+`var carName: String? = nil` 이렇게 표현한다. 여기서 **' nil '은  ' 없다 ' 라는 의미**를 갖는다.
+
+<br>
+
+<br>
+
+### Optional 고급기능
+
+---
+
+optional값을 print 했을 때 값이 그대로 나오지 않고 **optional에 싸여서 나온다.** 그래서 껍질을 까주는 행위가 필요
+
+``` swift
+var carName: String? = "Tank"
+
+print(carName)
+```
+
+<img src="./img/optional.png" width=200>
+
+위 사진 처럼 값이 싸여있다.
+
+#### Forced unwrapping -> 억지로 박스 개봉
+
+아주 간단하게 `print(carName!)` 뒤에 ' ! '만 붙여주면 된다. **단, nil 일 경우 에러가 발생한다.**
+
+<br>
+
+#### Optional binding (if let) -> 부드럽게 박스 개봉 1
+
+``` swift
+if let unwrappedCarName = carName {
+  print(unwrappedCarName) // 값이 있다면 이 코드를
+} else {
+  print("Car Name 없음") // 값이 nil이라면 이 코드를
+}
+```
+
+<br>
+
+#### Optional binding (guard) -> 부드럽게 박스 개봉 2
+
+``` swift
+func printParsedInt(from: String) {
+  guard let parsedInt = Int(from) else {
+    print("Int로 컨버팅 안됩니다.") // 통과하지 못했을 경우 이 코드가 출력이 되고
+    return // 종료된다.
+  } // 여기에 적혀있는 guard let이 방어선이라고 보면 된다.
+  print(parsedInt)
+}
+```
+
+guard let이 **복잡성을 낮출 수 있다.**
+
+<br>
+
+#### Nil coalescing -> 박스를 개봉했더니, 값이 없으면 디폴트 값 할당
+
+``` swift
+let myCarName: String = carName ?? "model S"
+// 만약 carName이 nil 이라면 model S를 디폴트 값으로 할당해라
+// carName이 nil이 아니라면 해당 값으로 할당 된다.
+```
