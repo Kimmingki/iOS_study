@@ -178,4 +178,68 @@ class someClass: SomeSuperClass, FirstProtocol, AnotherProtocol {
   위 코드는 좌표와 크기를 갖는 사각형을 표현하는 구조체에 관한 코드이다.
 
   여기서 `Rect` 구조체는 사각형의 중점을 표현하는 `center` 라는 계산된 프로퍼티를 제공한다.
+  
+  
+  
+* Type Property
+
+  타입 프로퍼티를 선언하기 위해서는 `static` 키워드를 사용한다. 클래스에서는 `static` 과 `class` 이렇게  2가지
+
+  형태로 타입 프로퍼티를 선언할 수 있는데 두 가지 경우의 차이는 서브클래스에서 `overriding` 기능 여부이다.
+
+  `class` 로 선언된 프로퍼티는 서브클래스에서 오버라이드 가능하다.
+
+  구조체, 열거형, 클래스에서의 타입 프로퍼티 선언의 (예) 는 다음과 같다.
+
+  ``` swift
+  struct SomeStructure {
+    static var storedTypeProperty = "Some value"
+    static var computedTypeProperty: Int {
+      return 1
+    }
+  }
+  enum SomeEnumeration {
+    static var storedTypeProperty = "Some value"
+    static var computedTypeProperty: Int {
+      return 6
+    }
+  }
+  class SomeClass {
+    static var storedTypeProperty = "Some value"
+    static var computedTypeProperty: Int {
+      return 27
+    }
+    class var overrideableComputedTypeProperty: Int {
+      return 107
+    }
+  }
+  ```
+
+  > 위의 계산된 타입 프로퍼티의 (예)는 읽기전용이지만, 같은 문법으로 계산된 인스턴스 타입 프로퍼티에서는
+  >
+  > 읽고 쓸 수 있는 프로퍼티로 사용할 수 있다.
+
+<br>
+
+#### Property vs. Method
+
+**Property**
+
+* 호출 시 (저장된) 값을 하나 반환한다.
+
+**Method**
+
+* 호출 시 어떤 작업을 한다.
+
+어떤 것을 사용해야할지 모르겠다면 **이것을 따르면 되겠다.**
+
+<img src="./img/property_vs_method.png" width=600>
+
+<br>
+
+<br>
+
+### Method
+
+---
 
