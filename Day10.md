@@ -234,12 +234,3 @@ class someClass: SomeSuperClass, FirstProtocol, AnotherProtocol {
 어떤 것을 사용해야할지 모르겠다면 **이것을 따르면 되겠다.**
 
 <img src="./img/property_vs_method.png" width=600>
-
-<br>
-
-<br>
-
-### Method
-
----
-
