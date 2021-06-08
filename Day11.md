@@ -53,5 +53,143 @@ structure (Stack)와 class (Heap)는 **메모리에 할당되는 공간이 다�
 
 * 메로리를 관리해야 한다. (변수를 할당하고 해제하는 책임이 있다.)
 
+<br>
 
+<br>
 
+### Struct vs. Class	언제, 무엇을 쓸까
+
+---
+
+#### 이럴 때 Struct를 쓰자
+
+* 두 object를 "같다, 다르다"로 비교해야 하는 경우
+
+  ``` swift
+  let point1 = Point(x: 3, y: 5)
+  let point2 = Point(x: 3, y: 5)
+  ```
+
+* Copy된 각 객체들이 독립적인 상태를 가져야 하는 경우
+
+  ``` swift
+  var myMac = Mac(owner: "Jason")
+  var yourMac = myMac
+  yourMac.owner = "Jay"
+  
+  myMac.owner
+  yourMac.owner
+  ```
+
+* 코드에서 object의 데이터를 여러 스레드 걸쳐 사용할 경우
+
+<br>
+
+#### 이럴 때 Class를 쓰자
+
+* 두 object의 인스턴스 자체가 같음을 확인해야 할 때
+
+* 하나의 객체가 필요하고, 여러 대상에 의해 접근되고 변경이 필요한 경우
+
+  예를들어, 앱 개발할 때 UIApplication 이라는 객체가 있는데 앱 구동에 있어서 유일한 하나의 객체이다.
+
+  그런데 앱 내 여러 object들에 의해서 접근이 될 필요가 있다. 이런 경우에 class로 만든다.
+
+<br>
+
+#### 쉽게 설명하기!
+
+1. **일단 웬만한 object는 Struct로 쓰자** 그리고 필요하다면 class로 변경하자
+   * Swift는 Struct를 좋아한다.
+     * swift 1.2
+       * struct: 81
+       * enum: 8
+       * class: 3
+     * swift 2.0
+       * struct: 87
+       * enum: 8
+       * class: 4
+     * swift 3.0
+       * struct: 124
+       * enum: 19
+       * class: 3
+
+<br>
+
+<br>
+
+### 상속 (Inheritance)
+
+---
+
+class는 method, property와 다른 특징을 다른 class로 부터 상속할 수 있다.
+
+이것이 swift에서 class가 다른 타입과 구분되는 근본적인 요소이다.
+
+class에서 stored property와 computed property와 상관 없이 상속 받은 property에
+
+property observer를 설정해서 값 설정에 반응 할 수 있다.
+
+``` swift
+struct Grade {
+    var letter: Character
+    var points: Double
+    var credits: Double
+}
+
+class Person {
+    var firstName: String
+    var lastName: String
+    
+    init(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+    
+    func printMyName() {
+        print("My name is \(firstName) \(lastName)")
+    }
+}
+
+class Student: Person {
+    var grades: [Grade] = []
+}
+```
+
+위 코드에서
+
+Person : Super Class (Parent Class)
+
+Student: Sub Class (Child Class)
+
+<br>
+
+#### 상속의 규칙
+
+* 자식은 한개의 super class만 상속 받는다.
+* 부모는 여러 자식들을 가질 수 있다.
+* 상속의 깊이는 상관이 없다.
+
+<br>
+
+#### 상속은 언제 하면 좋을까?
+
+1. Single Responsibility (단일 책임)
+
+   각 class는 한개의 고려 사항만 있으면 된다.
+
+2. Type Safety (타입이 분명해야 할 때)
+
+3. Shared Base Classes (다자녀가 있다)
+
+4. Extensibility (확장성이 필요한 경우)
+
+5. Identity (정체를 파악하기 위해)
+
+<br>
+
+#### designated vs. convenience
+
+* DI는 자신의 부모의 DI를 호출해야 한다.
+* CI는 같은 class의 initializer를 꼭 하나 호출해야 한다.
+* CI는 궁극적으로 DI를 호출해야 한다.
